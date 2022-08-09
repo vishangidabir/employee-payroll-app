@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/new_payroll_form.css">
     <title>Employee payroll form</title>
-    <script defer src="../js/payroll_form.js"></script>
+    <script defer src="../js/Employee_payroll.js"></script>
+    <script defer src="../js/new_payroll_form.js"></script>
 </head>
 
 <body>
-   <!-- UC 1 -->
    <header class="header-content header">
          <div class="logo-content">
             <img src="../assets/assets/images/logo.png" alt="">
@@ -23,16 +23,15 @@
          </div>
    </header> 
 
-   <!-- UC 2 -->
-   <div class="form-content">
-      <form class="form" action="#" onsubmit="save(event);return false">
+   <div  id="formId" class="form-content">
+      <form class="form" action="#" onreset="resetForm()" onsubmit="save(event);return false">
          <div class="form-head">Employee Payroll Form </div>
          <div class="row-content">
          <label class="label text" for="name">Name</label>
-        <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
-   </div>
-
-   <!-- UC 3 -->
+         <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+         <error-output class="text-error" for="text"></error-output>
+         </div>
+     
       <div class="row-content">
          <label class="label text" for="profile">Profile image</label>
          <div class="profile-radio-content">
@@ -59,7 +58,6 @@
          </div>
    </div>
     
-   <!-- UC 4 -->
    <div class="row-content">
          <label class="label text" for="gender">Gender</label>
          <div>
@@ -69,8 +67,6 @@
             <label class="text" for="female">Female</label>
          </div>
    </div>
-
-   <!-- UC 5 -->
    <div class="row-content">
       <label class="label text" for="department">Department</label>
       <div>
@@ -93,7 +89,6 @@
       <output class="salary-output text" for="salary">400000</output>
    </div>
 
-   <!-- UC 6 -->
    <div class="row-content">
       <label class="label text" for="startDate">Start Date</label>
       <div>
@@ -156,7 +151,6 @@
       </div>
    </div>
 
-   <!-- UC 7 -->
    <div class="row-content">
       <label class="label text" for="notes">Notes</label>
       <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
@@ -172,4 +166,3 @@
 </div>
 </body>
 </html>
-
